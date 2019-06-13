@@ -1,0 +1,9 @@
+server:
+  port: 8096
+spring:
+  application:
+    name: admin-client
+  cloud:
+    config:
+      uri: http://localhost:8888 # default
+      fail-fast: true

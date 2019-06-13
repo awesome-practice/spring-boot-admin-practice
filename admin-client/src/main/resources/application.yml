@@ -1,0 +1,41 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 3
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  server:
+    port: 8097
+#  security:
+#    enabled: false
+
+#username: lbd default
+server:
+  tomcat:
+    basedir: ${spring.application.name}/tomcat
+    accesslog:
+      enabled: true
+      prefix: access_log
+      suffix: .log
+      pattern: "%h %l %u %t %r %s %b %D"
+      file-date-format: ".yyyy-MM-dd"
+      rename-on-rotate: true
+echo:
+  greetings:
+    - hello
+    - morning
+    - nice to meet you
+    - how are you today
+
+message: solve it
